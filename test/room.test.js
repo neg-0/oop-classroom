@@ -1,9 +1,9 @@
 const expect = require('chai').expect
 const Room = require('../src').Room
 
-xdescribe('Room', function () {
+describe('Room', function () {
   before(function () {
-    this.properties = [ 'Hogwarts', 'a magical school' ]
+    this.properties = ['Hogwarts', 'a magical school']
   })
 
   describe('new Room()', function () {
@@ -15,7 +15,7 @@ xdescribe('Room', function () {
 
     it('should have properties by the same name', function () {
       const room = new Room(...this.properties)
-      const [ name, description ] = this.properties
+      const [name, description] = this.properties
 
       expect(room.name).to.equal(name)
       expect(room.description).to.equal(description)

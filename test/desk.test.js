@@ -1,9 +1,9 @@
 const expect = require('chai').expect
 const Desk = require('../src').Desk
 
-xdescribe('Desk', function () {
+describe('Desk', function () {
   before(function () {
-    this.properties = [ 60, 48, 48, false ]
+    this.properties = [60, 48, 48, false]
   })
 
   describe('new Desk()', function () {
@@ -15,7 +15,7 @@ xdescribe('Desk', function () {
 
     it('should have properties by the same name', function () {
       const desk = new Desk(...this.properties)
-      const [ length, width, height, isWhiteboard ] = this.properties
+      const [length, width, height, isWhiteboard] = this.properties
 
       expect(desk.length).to.equal(length)
       expect(desk.width).to.equal(width)

@@ -1,9 +1,9 @@
 const expect = require('chai').expect
 const Student = require('../src').Student
 
-xdescribe('Student', function () {
+describe('Student', function () {
   before(function () {
-    this.properties = [ 'Shelly Vasquez', 44 ]
+    this.properties = ['Shelly Vasquez', 44]
   })
 
   describe('new Student()', function () {
@@ -15,7 +15,7 @@ xdescribe('Student', function () {
 
     it('should have properties by the same name', function () {
       const student = new Student(...this.properties)
-      const [ name, skillLevel ] = this.properties
+      const [name, skillLevel] = this.properties
 
       expect(student.name).to.equal(name)
       expect(student.skillLevel).to.equal(skillLevel)

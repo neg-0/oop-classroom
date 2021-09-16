@@ -1,9 +1,9 @@
 const expect = require('chai').expect
 const Marker = require('../src').Marker
 
-xdescribe('Marker', function () {
+describe('Marker', function () {
   before(function () {
-    this.properties = [ 'medium', 'pink', 100 ]
+    this.properties = ['medium', 'pink', 100]
   })
 
   describe('new Marker()', function () {
@@ -15,7 +15,7 @@ xdescribe('Marker', function () {
 
     it('should have properties by the same name', function () {
       const marker = new Marker(...this.properties)
-      const [ size, color, remainingInk ] = this.properties
+      const [size, color, remainingInk] = this.properties
 
       expect(marker.size).to.equal(size)
       expect(marker.color).to.equal(color)
@@ -26,7 +26,7 @@ xdescribe('Marker', function () {
   describe('.write()', function () {
     it('should decrement `remainingInk` by the number of characters written', function () {
       const marker = new Marker(...this.properties)
-      const [ _size, _color, remainingInk ] = this.properties
+      const [_size, _color, remainingInk] = this.properties
 
       const word = 'hello'
       marker.write(word)
@@ -36,7 +36,7 @@ xdescribe('Marker', function () {
 
     it('should not decrement any characters that are spaces', function () {
       const marker = new Marker(...this.properties)
-      const [ _size, _color, remainingInk ] = this.properties
+      const [_size, _color, remainingInk] = this.properties
 
       const word = 'hello world'
       marker.write(word)
